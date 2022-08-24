@@ -113,7 +113,7 @@ public class ChatSystem : MonoBehaviour
         public string name;
         [SerializeField]
         public int charIndex;
-        [TextArea(2, 2)]
+        [TextArea(2, 3)]
         [SerializeField]
         public string chat;
     }

@@ -33,11 +33,11 @@ RectTransform:
   m_Father: {fileID: 1860137764878013332}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 298, y: 39.5}
-  m_SizeDelta: {x: 335, y: 90}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -95, y: -106}
+  m_SizeDelta: {x: 480, y: 90}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &1137676271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 83.80316, y: 0, z: 83.803116, w: 30.917679}
+  m_margin: {x: 172.09738, y: -35.571423, z: 6.118627, w: 35.78946}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.666504, y: -50}
+  m_AnchoredPosition: {x: -53, y: -50}
   m_SizeDelta: {x: 1550, y: 144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1860137765182369103
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 423.26398, y: 0, z: 445.9358, w: 35.664}
+  m_margin: {x: 74.65704, y: 0, z: 111.34302, w: 13.505569}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -486,11 +486,11 @@ RectTransform:
   m_Father: {fileID: 1860137764878013332}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: 39.5}
-  m_SizeDelta: {x: 335, y: 90}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 334, y: 90}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &1860137766629198005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 83.80316, y: 0, z: 83.803116, w: 30.917679}
+  m_margin: {x: 83.80316, y: 0, z: -33.8338, w: 12.267933}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
       for you.
   - name: Player
     charIndex: 0
-    chat: That is so thoughtful! How nice if I could send my wishes too
+    chat: That is so thoughtful! How nice if I could send my wishes too.
   - name: Rabbit
     charIndex: 1
     chat: I can help with that, do you see a Wishing Lake over there?
