@@ -1,9 +1,8 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;
 using UnityEngine.UI;
 
 public class ChatSystem : MonoBehaviour
@@ -26,11 +25,22 @@ public class ChatSystem : MonoBehaviour
     private int conversionIndex;
     private string displayChar;
 
+    public Action chatCompleteCallback;
+
+    [SerializeField]
+    private PlayerInput input;
+
     bool press;
 
     private void Awake()
     {
-        InputSystem.onAnyButtonPress.Call(ctrl => press = true);
+        input.SwitchCurrentActionMap("UI");
+        input.actions["Click"].started += ctx =>
+        {
+            press = true;
+        };
+
+        chatCompleteCallback += CompleteChat;
     }
 
     // Start is called before the first frame update
@@ -61,6 +71,9 @@ public class ChatSystem : MonoBehaviour
             }
             conversionIndex++;
         }
+
+        if (chatCompleteCallback != null)
+            chatCompleteCallback();
     }
 
     public IEnumerator DisplayText(int chatIndex)
@@ -104,6 +117,13 @@ public class ChatSystem : MonoBehaviour
         {
             nameText[i].gameObject.SetActive(false);
         }
+    }
+
+    public void CompleteChat()
+    {
+        input.SwitchCurrentActionMap("Player");
+        gameObject.SetActive(false);
+        chatCompleteCallback -= CompleteChat;
     }
 
     [System.Serializable]
