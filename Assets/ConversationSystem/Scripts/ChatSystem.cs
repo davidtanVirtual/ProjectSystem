@@ -21,26 +21,39 @@ public class ChatSystem : MonoBehaviour
     private Image chatBackground;
     [SerializeField]
     private float displayTextDelay;
+    [SerializeField]
+    private Button input;
 
     private int conversionIndex;
     private string displayChar;
+    private bool press;
 
     public Action chatCompleteCallback;
 
-    [SerializeField]
-    private PlayerInput input;
-
-    bool press;
+    //[SerializeField]
+    //private PlayerInput input;
 
     private void Awake()
     {
-        input.SwitchCurrentActionMap("UI");
-        input.actions["Click"].started += ctx =>
-        {
-            press = true;
-        };
+        //input.SwitchCurrentActionMap("UI");
+        //input.actions["Click"].started += ctx =>
+        //{
+        //    press = true;
+        //};
+    }
+
+    private void OnEnable()
+    {
+        input.onClick.AddListener(() => press = true);
 
         chatCompleteCallback += CompleteChat;
+    }
+
+    private void OnDisable()
+    {
+        input.onClick.RemoveAllListeners();
+
+        chatCompleteCallback -= CompleteChat;
     }
 
     // Start is called before the first frame update
@@ -121,7 +134,7 @@ public class ChatSystem : MonoBehaviour
 
     public void CompleteChat()
     {
-        input.SwitchCurrentActionMap("Player");
+        //input.SwitchCurrentActionMap("Player");
         gameObject.SetActive(false);
         chatCompleteCallback -= CompleteChat;
     }
